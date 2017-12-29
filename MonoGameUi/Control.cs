@@ -25,9 +25,9 @@ namespace MonoGameUi
 
         private Border padding = Border.All(0);
 
-        private SoundEffect clickSound = null;
+        //private SoundEffect clickSound = null;
 
-        private SoundEffect hoverSound = null;
+        //private SoundEffect hoverSound = null;
 
         /// <summary>
         /// Referenz auf den aktuellen Screen Manager
@@ -37,38 +37,38 @@ namespace MonoGameUi
         /// <summary>
         /// Sound der beim Klicken abgespielt wird
         /// </summary>
-        public SoundEffect ClickSound
-        {
-            get
-            {
-                return clickSound;
-            }
-            set
-            {
-                if (clickSound != value)
-                {
-                    clickSound = value;
-                }
-            }
-        }
+        //public SoundEffect ClickSound
+        //{
+        //    get
+        //    {
+        //        return clickSound;
+        //    }
+        //    set
+        //    {
+        //        if (clickSound != value)
+        //        {
+        //            clickSound = value;
+        //        }
+        //    }
+        //}
 
         /// <summary>
         /// Sound der beim Hoveren des Controls abgespielt wird.
         /// </summary>
-        public SoundEffect HoverSound
-        {
-            get
-            {
-                return hoverSound;
-            }
-            set
-            {
-                if (hoverSound != value)
-                {
-                    hoverSound = value;
-                }
-            }
-        }
+        //public SoundEffect HoverSound
+        //{
+        //    get
+        //    {
+        //        return hoverSound;
+        //    }
+        //    set
+        //    {
+        //        if (hoverSound != value)
+        //        {
+        //            hoverSound = value;
+        //        }
+        //    }
+        //}
 
         /// <summary>
         /// Standard-Background des Controls
@@ -769,7 +769,7 @@ namespace MonoGameUi
 
 
         /// <summary>
-        /// Legt optional eine definierte Höhe für dieses Control fest. 
+        /// Legt optional eine definierte Höhe für dieses Control fest.
         /// </summary>
         public int? Height
         {
@@ -1044,7 +1044,7 @@ namespace MonoGameUi
         }
 
         /// <summary>
-        /// Berechnet den Client-Bereich auf Basis der aktuellen 
+        /// Berechnet den Client-Bereich auf Basis der aktuellen
         /// Position/Größe/Margin/Padding in lokalen Koordinaten.
         /// </summary>
         public Rectangle ActualClientArea
@@ -1060,7 +1060,7 @@ namespace MonoGameUi
         }
 
         /// <summary>
-        /// Berechnet den Verfügbaren Client-Bereich unter Berücksichtigung der 
+        /// Berechnet den Verfügbaren Client-Bereich unter Berücksichtigung der
         /// ActualSize und den eingestellten Margins und Paddings.
         /// </summary>
         public Point ActualClientSize
@@ -1166,8 +1166,8 @@ namespace MonoGameUi
                         HoveredChanged(this, args);
 
                     // Sound abspielen
-                    if (hoverSound != null && hovered == TreeState.Active && args.OldValue != TreeState.Passive)
-                        hoverSound.Play();
+                    //if (hoverSound != null && hovered == TreeState.Active && args.OldValue != TreeState.Passive)
+                    //    hoverSound.Play();
                 }
             }
         }
@@ -1334,8 +1334,8 @@ namespace MonoGameUi
             }
 
             // Click-Sound abspielen
-            if (clickSound != null)
-                clickSound.Play();
+            //if (clickSound != null)
+            //    clickSound.Play();
 
             return Background != null;
         }
@@ -1372,8 +1372,8 @@ namespace MonoGameUi
             }
 
             // Click-Sound abspielen
-            if (clickSound != null)
-                clickSound.Play();
+            //if (clickSound != null)
+            //    clickSound.Play();
 
             return Background != null;
         }
@@ -1911,7 +1911,7 @@ namespace MonoGameUi
 
         protected virtual void OnKeyTextPress(KeyTextEventArgs args)
         {
-            
+
         }
 
         /// <summary>
@@ -2042,7 +2042,7 @@ namespace MonoGameUi
         }
 
         /// <summary>
-        /// Gibt die grafische Reihenfolge der Controls 
+        /// Gibt die grafische Reihenfolge der Controls
         /// innerhalb eines Containers an. (0 ganz vorne, 9999 weiter hinten)
         /// </summary>
         public int ZOrder
@@ -2086,7 +2086,7 @@ namespace MonoGameUi
         }
 
         /// <summary>
-        /// Setzt den Fokus auf das angegebene Control für den kompletten 
+        /// Setzt den Fokus auf das angegebene Control für den kompletten
         /// Visual Tree ab diesem Control abwärts.
         /// </summary>
         /// <param name="control"></param>
